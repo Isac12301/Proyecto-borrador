@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Isac12301/Config-Serive.git
+          default-label: master
+
+eureka:
+  client:
+    serviceUrl:
+      # Direccion donde esto corriendo tu servidor Eureka.
+      defaultZone: http://localhost:8761/eureka/

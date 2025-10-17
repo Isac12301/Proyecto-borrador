@@ -1,0 +1,10 @@
+# Nombre de la aplicación. Debe coincidir con el nombre del archivo de configuración
+spring:
+  application:
+    name:  productos-service
+  cloud:
+    config:
+      # La URI de tu Servidor de Configuración que acabamos de crear.
+      uri: http://localhost:8888
+      # La rama de Git que debe leer.
+      label: master

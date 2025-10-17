@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    register-with-eureka: false
+
+    fetch-registry: false
+  
+  server:
+    # En entornos de produccion, se recomienda desactivar esto para mayor resiliencia.
+    # Para desarrollo, lo dejamos aso. Evita que se eliminen instancias de servicios
+    # que no se pueden comunicar temporalmente por problemas de red.
+    enable-self-preservation: true
