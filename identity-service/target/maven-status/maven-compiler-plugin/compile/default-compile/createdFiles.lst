@@ -1,0 +1,11 @@
+com\netshop\identity_service\repository\UsuarioRepositorio.class
+com\netshop\identity_service\dto\AuthRespuesta.class
+com\netshop\identity_service\IdentityServiceApplication.class
+com\netshop\identity_service\dto\AuthPeticiones$LoginPeticion.class
+com\netshop\identity_service\service\DetallesUsuarioServicioImpl.class
+com\netshop\identity_service\dto\AuthPeticiones.class
+com\netshop\identity_service\seguridad\JwtProveedor.class
+com\netshop\identity_service\seguridad\ConfiguracionSeguridad.class
+com\netshop\identity_service\dto\AuthPeticiones$RegistroPeticion.class
+com\netshop\identity_service\controlador\AuthController.class
+com\netshop\identity_service\entity\Usuario.class

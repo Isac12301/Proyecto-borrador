@@ -1,0 +1,24 @@
+server:
+  port: 8200 # Puerto para el servicio de ventas
+
+spring:
+  datasource:
+    # Conexión a la base de datos dedicada a ventas y pedidos
+    url: jdbc:sqlserver://netcompany.database.windows.net:1433;database=DB_Ventas;encrypt=true;trustServerCertificate=false;loginTimeout=30;
+    username: netcompany
+    password: "@Isac922024126"
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+  hikari:
+    pool-name: HikariPool-Ventas
+
+# Configuración para registrarse en Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

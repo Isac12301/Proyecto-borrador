@@ -1,0 +1,28 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://netcompany.database.windows.net:1433;database=DB_Identity;encrypt=true;trustServerCertificate=false;loginTimeout=30;
+    username: netcompany
+    password: "@Isac922024126"
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.SQLServerDialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
+jwt:
+  secret: "claveSuperSecretaParaGenerarTokensSegurosDeNetShop123456"
+  expiration: 86400000

@@ -1,0 +1,9 @@
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\dto\AuthPeticiones.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\service\DetallesUsuarioServicioImpl.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\entity\Usuario.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\seguridad\JwtProveedor.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\dto\AuthRespuesta.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\controlador\AuthController.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\repository\UsuarioRepositorio.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\IdentityServiceApplication.java
+G:\Desarrollo de Aplicaciones Web II\Proyecto\identity-service\src\main\java\com\netshop\identity_service\seguridad\ConfiguracionSeguridad.java

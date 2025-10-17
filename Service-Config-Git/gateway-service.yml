@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: gateway-service
+    name: api-gateway
   cloud:
     gateway:
       discovery:
@@ -11,22 +11,40 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        # Ruta para productos
+        # Productos
         - id: productos-service
           uri: lb://productos-service
           predicates:
             - Path=/api/productos/**
-
+          filters:
+            - StripPrefix=1
+        #Caategorias(Productos)
         - id: categorias-service
           uri: lb://productos-service
           predicates:
             - Path=/api/categorias/**
-        # Ruta pública (login, registro)
-        - id: auth-service
-          uri: lb://auth-service
+          filters:
+            - StripPrefix=1
+
+        # Identity
+        - id: identity-service
+          uri: lb://identity-service
           predicates:
             - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
+
+        # Usuarios
+        - id: usuario-service
+          uri: lb://usuario-service
+          predicates:
+            - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=1
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
