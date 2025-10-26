@@ -1,0 +1,9 @@
+spring:
+  application:
+    name:  ventas-service
+  cloud:
+    config:
+      # La URI de tu Servidor de Configuración que acabamos de crear.
+      uri: http://localhost:8888
+      # La rama de Git que debe leer.
+      label: master
