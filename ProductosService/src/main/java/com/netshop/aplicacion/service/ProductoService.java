@@ -32,6 +32,7 @@ public class ProductoService implements ProductoUseCase {
                 .nombre(request.getNombre())
                 .precio(request.getPrecio())
                 .stock(request.getStock())
+                .imagen(request.getImagen())
                 .categoria(categoria)
                 .build();
 
@@ -43,6 +44,7 @@ public class ProductoService implements ProductoUseCase {
                 .nombre(saved.getNombre())
                 .precio(saved.getPrecio())
                 .stock(saved.getStock())
+                .imagen(saved.getImagen())
                 .categoriaNombre(saved.getCategoria().getNombre())
                 .build();
     }
@@ -57,8 +59,26 @@ public class ProductoService implements ProductoUseCase {
                         .nombre(p.getNombre())
                         .precio(p.getPrecio())
                         .stock(p.getStock())
+                        .imagen(p.getImagen())
                         .categoriaNombre(p.getCategoria().getNombre())
                         .build())
                 .toList();
+    }
+
+    // ✅ Nuevo método para obtener producto por ID
+    @Override
+    public ProductoResponse obtenerProductoPorId(Long id) {
+        Producto producto = (Producto) productoRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
+
+        return ProductoResponse.builder()
+                .id(producto.getId())
+                .codigo(producto.getCodigo())
+                .nombre(producto.getNombre())
+                .precio(producto.getPrecio())
+                .stock(producto.getStock())
+                .imagen(producto.getImagen())
+                .categoriaNombre(producto.getCategoria().getNombre())
+                .build();
     }
 }

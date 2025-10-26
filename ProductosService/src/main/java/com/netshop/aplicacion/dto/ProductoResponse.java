@@ -11,5 +11,6 @@ public class ProductoResponse {
     private String nombre;
     private double precio;
     private int stock;
+    private String imagen;
     private String categoriaNombre;
 }

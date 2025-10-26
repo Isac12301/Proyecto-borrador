@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Isac12301/Config-Serive.git
+          uri: https://github.com/Isac12301/Config-Serive-efsrt.git
           default-label: master
 
 eureka:

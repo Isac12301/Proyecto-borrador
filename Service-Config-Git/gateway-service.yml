@@ -18,7 +18,8 @@ spring:
             - Path=/api/productos/**
           filters:
             - StripPrefix=1
-        #Caategorias(Productos)
+
+        # Categorías
         - id: categorias-service
           uri: lb://productos-service
           predicates:
@@ -39,6 +40,22 @@ spring:
           uri: lb://usuario-service
           predicates:
             - Path=/api/usuarios/**
+          filters:
+            - StripPrefix=1
+
+        # Ventas
+        - id: ventas-service
+          uri: lb://ventas-service
+          predicates:
+            - Path=/api/ventas/**
+          filters:
+            - StripPrefix=1
+
+        # 🛒 Carrito
+        - id: carrito-service
+          uri: lb://ventas-service
+          predicates:
+            - Path=/api/carrito/**
           filters:
             - StripPrefix=1
 

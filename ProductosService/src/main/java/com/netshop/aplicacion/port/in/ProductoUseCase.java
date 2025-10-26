@@ -8,4 +8,6 @@ import java.util.List;
 public interface ProductoUseCase {
     ProductoResponse crearProducto(CreateProductoRequest request);
     List<ProductoResponse> listarProductos();
+
+    ProductoResponse obtenerProductoPorId(Long id);
 }
